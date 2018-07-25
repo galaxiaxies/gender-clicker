@@ -1,0 +1,191 @@
+/*
+9500DB
+0023B2
+0023B2
+FFFF89
+A9FF70
+35E0FF
+000000
+*/
+
+* {
+    background: transparent none;
+    border: 0 solid #000;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #A9FF70;
+    color: black;
+    font-family: "Calibri Light", Calibri, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 3rem;
+    word-wrap: normal;
+    overflow-wrap: normal;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
+
+#container {
+    background-color: #A9FF70;
+    display: grid;
+    font-size: 1.1rem;
+    line-height: 1.4em;
+    max-height: 100%;
+    text-align: justify;
+    grid-template-columns: [col] 20% [col] 55% [col] 25%;
+    grid-template-areas: "lmenu content rmenu" "lmenu content rmenu";
+}
+
+menu {
+    background-color: #FFFF89;
+    padding: 0.25em;
+    grid-row: 2/4;
+}
+
+#content {
+    background-color: #A9FF70;
+    padding: 0.5em;
+    text-align: center;
+    grid-row: 2/4;
+    grid-column: 2/3;
+    order: 3;
+    grid-area: content;
+}
+
+#left {
+    grid-area: lmenu;
+}
+
+#right {
+    grid-column: 3/4;
+    order: 4;
+    grid-area: rmenu;
+}
+
+#tumblr {
+    margin: 2em 0 0 0;
+}
+
+#tumblr:hover {
+    cursor: pointer;
+}
+
+#god-wrapper {
+    font-family: Calibri, sans-serif;
+    padding: 0.5em;
+    text-align: center;
+}
+
+#god-card {
+    background-color: #35E0FF;
+    border-radius: 1em;
+    margin: 1.5em 12.5% 0;
+    transition: 1s;
+    min-width: 70%;
+    min-height: 90%;
+}
+
+#god-card:hover {
+    background-color: lightgray;
+}
+
+#god {
+    width: 90%;
+}
+
+.menu {
+    list-style: none;
+}
+
+.shop-cost {
+    padding: 0.25em;
+    text-align: right;
+}
+
+.shop-cost::after {
+    content: ' \2141';
+}
+
+.shop-count {
+    grid-area: count;
+}
+
+.shop-info {
+    font-weight: bold;
+}
+
+.shop-item {
+    background: #0023B2 linear-gradient(to right, #0023B2, #9500DB, #D60082);
+    border: 1px black solid;
+    color: white;
+    display: grid;
+    margin: 0.25em;
+    padding: 0.25em 0.5em 0.25em;
+    transition: 0.5s;
+    grid-template-areas: "label cost" "description description" "count count";
+}
+
+.shop-item h2 {
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
+
+.shop-item .shop-info {
+    font-size: 1.4em;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 red,
+    -1px 1px 0 yellow,
+    1px 1px 0 blue;
+}
+
+.shop-item:hover {
+    background: #9500DB linear-gradient(to right, #9500DB, #D60082, #0023B2);
+    cursor: pointer;
+}
+
+.shop-label {
+    grid-area: label;
+}
+
+.shop-description {
+    grid-area: description;
+}
+
+.gender {
+    max-width: 1.5em;
+}
+

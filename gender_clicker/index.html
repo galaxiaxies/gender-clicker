@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gender clicker</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" title="mogai">
+    <link rel="alternate stylesheet" type="text/css" href="css/better.css" title="modern-mint">
+    <script type="text/javascript" src="../assets/lib/jquery.js"></script>
+    <!--<script type="text/javascript" src="../assets/lib/p5js/p5.js"></script>-->
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/styleswitch.js" defer></script>
+    <script type="text/javascript" src="js/save.js" defer></script>
+</head>
+<body>
+<div id="container">
+    <menu id="left">
+        <h2 class="header">gender of the day</h2>
+        <div id="god-wrapper">
+            <div id="god-card">
+                <h3 id="god-caption"></h3>
+                <img id="god" title="" alt="" src=""/>
+            </div>
+            <h3 id="affect"></h3>
+        </div>
+    </menu>
+    <div id="content">
+        <h1 id="clicker-genders" class="count label">0 genders</h1>
+        <h2 id="clicker-gps" class="count label">0 genders/second (base production of 0)</h2>
+        <img id="tumblr" class="clickable" title="hell" alt="tumblr" src="../assets/gender/tumblr.svg"/>
+        <br>
+        <br>
+        <br>
+        <div id="styleswitcher">
+            <b>style switcher</b><br>
+            <a href="#" onclick="setActiveStyleSheet('mogai'); return false;">mogai</a>
+            <a href="#" onclick="setActiveStyleSheet('modern-mint'); return false;">modern mint</a>
+        </div>
+    </div>
+    <menu id="right">
+        <h2 class="header">shop</h2>
+        <ul id="shop" class="menu">
+            <li id="binary" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">binary</h2>
+                    <p class="shop-description shop-info">a boring cis.</p>
+                    <span id="count-binary" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-binary" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="lgbt" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">lgbt</h2>
+                    <p class="shop-description shop-info">is this cis but better?</p>
+                    <span id="count-lgbt" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-lgbt" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="mogai" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">mogai</h2>
+                    <p class="shop-description shop-info">273 genders, 0 brains.</p>
+                    <span id="count-mogai" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-mogai" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="lab" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">gender lab</h2>
+                    <p class="shop-description shop-info">from a basement-dweller near you! new and improved Genders&trade;,
+                        fresh
+                        from the microwave.
+                    </p>
+                    <span id="count-lab" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-lab" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="pride" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">pride-flags</h2>
+                    <p class="shop-description shop-info">probably copies from beyond-mogai-pride-flags idk lol.</p>
+                    <span id="count-pride" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-pride" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="two" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">gender 2.0</h2>
+                    <p class="shop-description shop-info">new invention by tumblr.</p>
+                    <span id="count-two" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-two" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="beyond" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">beyond-mogai</h2>
+                    <p class="shop-description shop-info">the original.</p>
+                    <span id="count-beyond" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-beyond" class="shop-cost shop-info">0</div>
+            </li>
+            <li id="arco" class="shop-item clickable">
+                <div class="shop-infos">
+                    <h2 class="shop-label">arco-pluris</h2>
+                    <p class="shop-description shop-info">god can only hope they're a troll.</p>
+                    <span id="count-arco" class="shop-count shop-info">0</span>
+                </div>
+                <div id="cost-arco" class="shop-cost shop-info">0</div>
+            </li>
+        </ul>
+    </menu>
+</div>
+</body>
+</html>
